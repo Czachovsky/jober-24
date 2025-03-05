@@ -17,8 +17,7 @@ import {ToastComponent} from "./components/toast/toast.component";
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, HeroComponent, FooterComponent, TestimonialsComponent, ServicesComponent, TimelineComponent, LocationsComponent, FeaturesComponent, ButtonComponent, WhyUsComponent, BenefitsComponent, ToastComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
 }

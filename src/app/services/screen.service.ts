@@ -1,4 +1,3 @@
-import {EventManager} from '@angular/platform-browser';
 import {Injectable, EventEmitter, OnDestroy} from '@angular/core';
 
 @Injectable({
@@ -16,7 +15,6 @@ export class ScreenService implements OnDestroy {
 
   constructor() {
     window.addEventListener('resize', this.onResizeHandler);
-    // Emitujemy początkowy rozmiar ekranu
     this.getScreenSize();
   }
 
