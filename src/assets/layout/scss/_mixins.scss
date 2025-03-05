@@ -1,0 +1,6 @@
+@use "variables";
+
+@mixin fontSize($size) {
+  $remSize: $size / variables.$mainFontSize;
+  font-size: #{$remSize}rem;
+}
