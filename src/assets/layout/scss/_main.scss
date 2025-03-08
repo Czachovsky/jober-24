@@ -23,6 +23,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container_nopadding {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -101,4 +106,46 @@ h2 {
 
 .pb-120 {
   padding-bottom: 120px;
+}
+
+.article_wrapper {
+  background: var(--article-background);
+
+  .article {
+    background: var(--background-color);
+
+    ul {
+      margin: 0 0 1.5em 3em;
+      list-style: disc;
+
+      li {
+        line-height: 24px;
+        @include mixins.fontSize(16);
+      }
+    }
+
+    h1 {
+      @include mixins.fontSize(30);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      @include mixins.fontSize(32);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    h6 {
+      @include mixins.fontSize(16);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      @include mixins.fontSize(16);
+      line-height: 24px;
+    }
+  }
 }
