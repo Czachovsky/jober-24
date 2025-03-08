@@ -3,6 +3,7 @@ import {MenuElements, MenuTypes} from "./menu.types";
 import {NgClass, NgIf} from "@angular/common";
 import {UtilsService} from "../../services/utils.service";
 import {ScreenService} from "../../services/screen.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'jober24-menu',
@@ -21,6 +22,7 @@ export class MenuComponent {
   public readonly menuElements: MenuTypes[] = MenuElements;
   public readonly screen: ScreenService = inject(ScreenService);
   public isMobile: boolean = this.screen.getInitialWidth().width <= 992;
+  private readonly router: Router = inject(Router);
 
   constructor() {
     this.screen.onResize$.subscribe((dimensons) => {
@@ -29,14 +31,40 @@ export class MenuComponent {
   }
 
   public goTo(href: string): void {
-    this.utils.scrollToElm(document.getElementById(href)!);
-    if (this.isMobile) {
-      this.showMobileMenuActive = false;
-      setTimeout(() => {
-        this.showMobileMenuState = false;
-      }, 300);
+    const currentUrl = this.router.url;
+
+    if (currentUrl !== '/') {
+      this.router.navigate(['/']).then(() => {
+        this.scrollToElement(href);
+
+        if (this.isMobile) {
+          this.closeMobileMenu();
+        }
+      });
+    } else {
+      this.scrollToElement(href);
+      if (this.isMobile) {
+        this.closeMobileMenu();
+      }
     }
   }
+
+  private scrollToElement(href: string): void {
+    setTimeout(() => {
+      const element = document.getElementById(href);
+      if (element) {
+        this.utils.scrollToElm(element);
+      }
+    }, 0);
+  }
+
+  private closeMobileMenu(): void {
+    this.showMobileMenuActive = false;
+    setTimeout(() => {
+      this.showMobileMenuState = false;
+    }, 300);
+  }
+
 
   public hideMobileMenu(e: { target: { classList: { contains: (arg0: string) => any; }; }; }): void {
     if (!e.target.classList.contains('hamburgerBox') && !e.target.classList.contains('hamburgerInner')) {
