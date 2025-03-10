@@ -45,7 +45,7 @@ export class ContactFormComponent {
           this.toastService.show('Wysłano wiadomość', 'success');
         },
         error: (error) => {
-          this.toastService.show('Wystąpił błąd', 'error', 5000000);
+          this.toastService.show('Wystąpił błąd', 'error');
         }
       })
     }
