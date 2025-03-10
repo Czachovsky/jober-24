@@ -40,7 +40,7 @@ export class ContactFormComponent {
     if (this.recruitmentForm.invalid) {
       this.recruitmentForm.markAllAsTouched();
     } else {
-      this.http.post('api/contact.php', this.recruitmentForm.getRawValue()).subscribe({
+      this.http.post('https://jober24-api.mr-creations.pl/contact.php', this.recruitmentForm.getRawValue()).subscribe({
         next: (next: any) => {
           this.toastService.show('Wysłano wiadomość', 'success');
         },
