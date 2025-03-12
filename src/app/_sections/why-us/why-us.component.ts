@@ -1,6 +1,5 @@
 import {Component, inject} from '@angular/core';
 import {WhyUsObject, WhyUsTypes} from "./why-us.types";
-import {ServicesObject} from "../services/services.types";
 import {SanitizePipe} from "../../pipes/sanitize.pipe";
 import {ButtonComponent} from "../../components/button/button.component";
 import {UtilsService} from "../../services/utils.service";

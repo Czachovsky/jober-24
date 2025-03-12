@@ -2,7 +2,6 @@ import {Component, inject} from '@angular/core';
 import {ScreenService} from "../../services/screen.service";
 import {CarouselModule, OwlOptions} from "ngx-owl-carousel-o";
 import {features, FeaturesTypes} from "./features.types";
-import {MenuElements} from "../../components/menu/menu.types";
 
 @Component({
   selector: 'jober24-features',
