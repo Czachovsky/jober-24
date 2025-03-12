@@ -12,7 +12,7 @@ export const testimonials: TestimonialsTypes[] = [
     header: "110 osób w 10 dni – ratunek dla firmy na start sezonu letniego",
     opinion: 'Zbliżał się sezon letni, a firma usługowa mierzyła się z problemem braków kadrowych – urlopy stałych pracowników i nieskuteczność innych agencji sprawiły, że nie było możliwości obsługi wszystkich klientów. Potrzebna była natychmiastowa reakcja, ale konkurencyjne agencje dostarczały tylko pojedynczych kandydatów. Dzięki Jober24 w 10 dni udało się zbudować pełny 110-osobowy zespół.',
     name: "Anna N.",
-    company: "Roldrob"
+    company: "Zakłady drobiarskie"
   },
   {
     score: 5,
