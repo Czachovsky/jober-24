@@ -28,7 +28,6 @@ export class ServicesComponent implements AfterViewInit {
 
   updateContentHeights() {
     this.questionAnswers.toArray().forEach((answer, index) => {
-      console.log(answer)
       const height = answer.nativeElement.scrollHeight;
       this.services[index].contentHeight = height;
     });

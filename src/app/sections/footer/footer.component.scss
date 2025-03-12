@@ -29,7 +29,7 @@ footer {
 }
 
 .contact_form {
-  background: url(/assets/images/form_bg.webp) no-repeat scroll bottom center;
+  background: url(../../../assets/images/form_bg.webp) no-repeat scroll bottom center;
   background-size: 100% auto;
 }
 
@@ -79,9 +79,6 @@ footer {
   justify-content: flex-start;
   font-weight: 400;
   line-height: 24px;
-  @include mixins.lower-than('lg') {
-    margin-bottom: 16px !important;
-  }
 
   span {
     display: flex;
@@ -93,4 +90,15 @@ footer {
 .rights {
   color: var(--black-300);
   @include mixins.fontSize(12);
+}
+
+.urls{
+  @include mixins.lower-than('lg') {
+    margin-bottom: 16px !important;
+  }
+  a{
+    color: var(--text-white);
+    text-decoration: underline;
+
+  }
 }

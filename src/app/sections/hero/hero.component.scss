@@ -27,6 +27,7 @@ section {
   .r_hero {
     max-width: 100%;
     min-width: 522px;
+    min-height: 580px;
     @include mixins.lower-than('lg') {
       min-height: 450px;
       min-width: unset;

@@ -30,10 +30,13 @@ section {
     .timeline_years {
       margin: 0 -25px;
       @include mixins.lower-than('lg') {
-        gap:48px;
+        gap: 48px;
         padding: 0 24px;
-        margin:0;
+        margin: 0;
+        width: 955px;
+        transition: transform 0.3s ease-in-out;
       }
+
       & > div {
         z-index: 2;
 
@@ -85,7 +88,7 @@ section {
         top: 8px;
         z-index: 1;
         @include mixins.lower-than('lg') {
-          left:0;
+          left: 0;
         }
       }
     }

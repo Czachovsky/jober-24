@@ -16,21 +16,29 @@ import {ScreenService} from "../../services/screen.service";
 })
 export class TimelineComponent {
   @ViewChild('carousel') carousel!: CarouselComponent;
+  public mobilePosition = 0;
+  public mobileStep = 93;
   public readonly customOptions: OwlOptions = {
     loop: true,
     center: true,
     items: 1,
     dots: false,
     nav: true,
+    autoplay: true,
+    autoplayTimeout: 7000,
+    autoplayHoverPause: true,
     navText: ['<i class="pi pi-chevron-left"></i>', '<i class="pi pi-chevron-right"></i>']
   }
   public readonly screen: ScreenService = inject(ScreenService);
   public timelineData: TimelineTypes[] = this.adjustSlideIds(this.screen.getInitialWidth().width, timelineObject);
-
+  public windowWidth: number = this.screen.getInitialWidth().width;
+  public isMobile: boolean = this.screen.getInitialWidth().width <= 992;
 
   constructor() {
     this.screen.onResize$.subscribe((dimensons) => {
       this.timelineData = this.adjustSlideIds(dimensons.width, this.timelineData);
+      this.windowWidth = dimensons.width;
+      this.isMobile = dimensons.width <= 992;
     })
   }
 
@@ -48,6 +56,9 @@ export class TimelineComponent {
   }
 
   onSlideChange(event: SlidesOutputData) {
+    if (this.isMobile) {
+      this.moveTimeline(event.startPosition!);
+    }
 
     this.timelineData.forEach((item: TimelineTypes, index: number) => {
       item.activeState = item.id === event.slides![0].id;
@@ -55,7 +66,11 @@ export class TimelineComponent {
   }
 
   selectYear(id: string): void {
-    console.log(this.carousel)
     this.carousel.to(id);
+  }
+
+  private moveTimeline(sliderPosition: number): void {
+    const maxOffset = 955 - this.windowWidth;
+    this.mobilePosition = Math.max(this.mobileStep * -sliderPosition, -maxOffset);
   }
 }

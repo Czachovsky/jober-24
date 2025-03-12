@@ -1,8 +1,10 @@
 @use '../../../assets/layout/scss/mixins';
-section{
+
+section {
   width: 100%;
   overflow-x: hidden;
 }
+
 .locations_graph {
   min-height: 525px;
   background: url("../../../assets/images/map.webp") no-repeat scroll center / 100%;
@@ -13,10 +15,10 @@ section{
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    .mobile-map{
+    .mobile-map {
       position: absolute;
       z-index: -1;
-      top:0;
+      top: 0;
       margin-left: -29%;
     }
   }
@@ -38,3 +40,13 @@ section{
   }
 }
 
+.counters {
+  gap: 24px;
+  @include mixins.lower-than('lg') {
+    flex-direction: column;
+  }
+  & > div {
+    flex: 1;
+  }
+
+}

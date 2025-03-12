@@ -9,37 +9,23 @@ export interface TestimonialsTypes {
 export const testimonials: TestimonialsTypes[] = [
   {
     score: 5,
-    header: "200 specjalistów IT w 30 dni – wsparcie dla międzynarodowego giganta",
-    opinion: "Dynamiczny rozwój naszego działu IT wymagał natychmiastowego zwiększenia zespołu. Dzięki Jober24 w ciągu miesiąca pozyskaliśmy 200 wykwalifikowanych programistów i analityków danych, co pozwoliło nam zrealizować kluczowe projekty bez opóźnień.",
-    name: "Michał Nowak",
-    company: "Tech Solutions"
-  },
-  {
-    score: 4,
-    header: "Szybka rekrutacja 50 operatorów produkcji – klucz do utrzymania ciągłości dostaw",
-    opinion: "Nagłe zwiększenie zamówień postawiło nas przed wyzwaniem znalezienia 50 operatorów linii produkcyjnych w krótkim czasie. Jober24 nie tylko dostarczył wykwalifikowanych pracowników w dwa tygodnie, ale także pomógł w procesie wdrożenia.",
-    name: "Anna Kowalczyk",
-    company: "ManufacturePro"
+    header: "110 osób w 10 dni – ratunek dla firmy na start sezonu letniego",
+    opinion: 'Zbliżał się sezon letni, a firma usługowa mierzyła się z problemem braków kadrowych – urlopy stałych pracowników i nieskuteczność innych agencji sprawiły, że nie było możliwości obsługi wszystkich klientów. Potrzebna była natychmiastowa reakcja, ale konkurencyjne agencje dostarczały tylko pojedynczych kandydatów. Dzięki Jober24 w 10 dni udało się zbudować pełny 110-osobowy zespół.',
+    name: "Anna N.",
+    company: "Roldrob"
   },
   {
     score: 5,
-    header: "Specjaliści e-commerce na czas – ekspresowa rekrutacja dla lidera branży",
-    opinion: "Jako lider e-commerce musieliśmy błyskawicznie rozbudować zespół ds. analizy danych i UX. Jober24 w rekordowym tempie dostarczył 30 ekspertów, którzy natychmiast wzmocnili nasze operacje.",
-    name: "Tomasz Lis",
-    company: "OnlineMarket"
+    header: "18 inżynierów lotnictwa w 14 dni – ekspresowa rekrutacja dla lidera branży",
+    opinion: "Globalny producent komponentów lotniczych stanął przed nagłym wyzwaniem – pilnie potrzebował 18 wysoko wykwalifikowanych inżynierów, aby nadążyć za rosnącym zapotrzebowaniem i dotrzymać terminów kluczowych kontraktów. Dzięki Jober24 i naszej 24/7 globalnej sieci rekrutacyjnej, w zaledwie 14 dni dostarczyliśmy kompletny zespół inżynierów ze specjalizacją w aerodynamice, awionice i kompozytach.",
+    name: "Marek K.",
+    company: "AIRBUS"
   },
   {
-    score: 4,
-    header: "Rekrutacja 15 inżynierów mechaników w 3 tygodnie – sukces w sektorze automotive",
-    opinion: "Brak wykwalifikowanych inżynierów mechaników mógł zagrozić realizacji kluczowych kontraktów. Na szczęście Jober24 w ciągu 21 dni zapewnił nam specjalistów, dzięki którym utrzymaliśmy produkcję na pełnych obrotach.",
-    name: "Karolina Wiśniewska",
-    company: "AutoTech"
-  },
-  {
-    score: 4,
-    header: "Ekspresowa rekrutacja 10 managerów sprzedaży – rozbudowa sieci handlowej",
-    opinion: "Wzrost sprzedaży wymagał szybkiego powiększenia kadry zarządzającej. Jober24 dostarczył nam 10 doświadczonych managerów w ciągu miesiąca, co pozwoliło nam skutecznie rozwinąć sieć dystrybucji.",
-    name: "Piotr Wójcik",
-    company: "RetailMax"
+    score: 5,
+    header: "50 osób w 7 dni – ekspresowa rekrutacja dla e-commerce w szczycie sprzedaży",
+    opinion: "Dynamicznie rozwijający się sklep e-commerce stanął przed wyzwaniem nagłego wzrostu zamówień w sezonie sprzedażowym. Brak dodatkowych rąk do pracy groził opóźnieniami w realizacji zamówień i spadkiem zadowolenia klientów. Dzięki Jober24 i naszej błyskawicznej rekrutacji 24/7, w 7 dni dostarczyliśmy 50 wykwalifikowanych pracowników magazynowych i logistycznych, gotowych do natychmiastowego działania.",
+    name: "Jan W.",
+    company: "Logistic"
   }
 ];

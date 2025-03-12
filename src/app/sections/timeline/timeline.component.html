@@ -21,7 +21,7 @@
   </div>
 
   <div class="timeline">
-    <div class="timeline_years flex align-items-center justify-content-between relative">
+    <div class="timeline_years flex align-items-center justify-content-between relative" [style.transform]="'translateX(' + mobilePosition + 'px)'">
       <div class="flex-column align-items-center relative lg:flex hidden">
         <div class="year_dot"></div>
         <div class="year_label pt-5">
@@ -37,7 +37,7 @@
           </div>
         </div>
       }
-      <div class="flex flex-column align-items-center relative lg:flex hidden">
+      <div class="flex-column align-items-center relative lg:flex hidden">
         <div class="year_dot"></div>
         <div class="year_label pt-5">
           2026

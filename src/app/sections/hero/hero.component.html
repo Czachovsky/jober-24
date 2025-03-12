@@ -1,12 +1,12 @@
 <section>
   <div class="container flex justify-content-between align-items-stretch">
-    <div class="l_hero">
+    <div class="l_hero" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
       <span class="subheader pb-4">Rekrutujemy i Budujemy Zespoły</span>
-      <h1 class="pb-4">Rekrutujemy dla Ciebie 24 godziny na dobę!</h1>
+      <h1 class="pb-4">Podejmujemy się wyzwań, w których inni odpuścili.</h1>
       <div class="hero_description">
-        Nie tylko rekrutujemy – <b>budujemy zespoły</b>, które napędzają sukces naszych klientów. Dzięki <b>globalnemu
-        zasięgowi, nowoczesnej technologii</b> i
-        precyzyjnej selekcji dostarczamy <b>najlepszych specjalistów</b> z branż e-commerce, automotive i produkcji.
+        Nie szukamy tylko kandydatów – <b>tworzymy zespoły</b>, które napędzają sukces Twojej firmy. Dzięki
+        <b>zaawansowanej technologii i precyzyjnej selekcji</b> dostarczamy <b>najlepszych specjalistów</b> z branż e-commerce,
+        automotive i produkcji.
       </div>
       <div>
         <div class="py-6">
@@ -27,14 +27,12 @@
             <b class="ml-3">Globalny zasięg – docieramy do najlepszych specjalistów w każdej strefie czasowej</b>
           </div>
         </div>
-        @if(isMobile){
-          <j-button [label]="'Poznaj historię naszego sukcesu'" [icon]="'pi-arrow-circle-right'" [iconPosition]="'right'" [btnClass]="'w-full'" (clicked)="goToSection()"></j-button>
-        } @else{
-          <j-button [label]="'Poznaj historię naszego sukcesu'" [icon]="'pi-arrow-circle-right'" [iconPosition]="'right'" (clicked)="goToSection()"></j-button>
-            }
+        <j-button [size]=" isMobile ? 'medium' : 'large'" [label]="'Poznaj historię naszego sukcesu'"
+                  [icon]="'pi-arrow-circle-right'" [iconPosition]="'right'" (clicked)="goToSection()"
+                  [btnClass]="isMobile ? 'w-full' : ''"></j-button>
       </div>
     </div>
-    <div class="r_hero relative ">
+    <div class="r_hero relative" data-aos="fade-left" data-aos-once="true" data-aos-duration="2000">
       <div class="r_hero_round absolute">
         <h3>50k+</h3>
         <span>Ludzi w bazie</span>
