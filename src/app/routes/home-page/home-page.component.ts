@@ -1,12 +1,12 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {BenefitsComponent} from "../../sections/benefits/benefits.component";
-import {FeaturesComponent} from "../../sections/features/features.component";
-import {HeroComponent} from "../../sections/hero/hero.component";
-import {LocationsComponent} from "../../sections/locations/locations.component";
-import {ServicesComponent} from "../../sections/services/services.component";
-import {TestimonialsComponent} from "../../sections/testimonials/testimonials.component";
-import {TimelineComponent} from "../../sections/timeline/timeline.component";
-import {WhyUsComponent} from "../../sections/why-us/why-us.component";
+import {BenefitsComponent} from "../../_sections/benefits/benefits.component";
+import {FeaturesComponent} from "../../_sections/features/features.component";
+import {HeroComponent} from "../../_sections/hero/hero.component";
+import {LocationsComponent} from "../../_sections/locations/locations.component";
+import {ServicesComponent} from "../../_sections/services/services.component";
+import {TestimonialsComponent} from "../../_sections/testimonials/testimonials.component";
+import {TimelineComponent} from "../../_sections/timeline/timeline.component";
+import {WhyUsComponent} from "../../_sections/why-us/why-us.component";
 import * as AOS from "aos";
 import {NavigationEnd, Router} from "@angular/router";
 

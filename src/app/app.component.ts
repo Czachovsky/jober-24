@@ -1,8 +1,8 @@
 import {Component, inject} from '@angular/core';
 import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
-import {HeaderComponent} from "./sections/header/header.component";
+import {HeaderComponent} from "./_sections/header/header.component";
 
-import {FooterComponent} from "./sections/footer/footer.component";
+import {FooterComponent} from "./_sections/footer/footer.component";
 import {ButtonComponent} from "./components/button/button.component";
 import {ToastComponent} from "./components/toast/toast.component";
 
